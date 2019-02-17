@@ -4,10 +4,7 @@ Final Project for CSCI 3308 Spring 2019.
 # Customized Workout Generator
 
 ## Team
-Lauren Deans
-Christina Holt
-Bret Murray
-Derek Sessions
+Lauren Deans, Christina Holt, Bret Murray, Derek Sessions
 
 ## Vision Statement
 We will provide a web application that will be a tool for guiding the bored workout enthusiast. The user will provide input parameters such length of workout, equipment to use, and body target area, which will be used to generate a custom workout that help them meet their workout goals for the day.
@@ -31,6 +28,13 @@ We are all interested in using an excercise tool that we've come up with. The sc
 
 ## Development Method
 
+Apply Agile methods appropriate for our busy schedules. We plan to incorporate regular video meetings, Trello board for Kanban tracking. 
+
+- Weekly tag-up to discuss our achievements for the week, and our upcoming tasks. An evening later in the week, since it goes along with our Monday "end of week" schedule. 
+- Definining sprints two weeks at a time to coincide with Milestones.
+- Individually, we check in an update Trello board frequently. Follow work through email notifications. 
+- Communication channels through Slack and email until things become more stable.
+
 
 ## Project Tracking Software
-Trello
+Trello, Slack, GitHub
