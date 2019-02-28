@@ -1,0 +1,18 @@
+https://airtable.com/shrKZ9lPpw7EvjZ3X/tblvscpkbagqlWKkH
+Searchable open-source database organized by either major muscle, minor muscle, equipment, exercise type, and has gifs showing what it should look like.
+- Downloadable as a CSV! (completely free, no copyrights)
+- 115 individual exercises
+
+https://exrx.net/Lists/Directory
+Also searchable organized by body part (arms, legs, etc.) and then muscle. Has descriptions with equipment listed. Uses both gifs and videos.
+- No download versions (copyright restrictions, but fair for educational purposes (that's us)... in other words, as long as we don't sell it or pass it off as ours)
+
+https://wger.de/en/exercise/overview/
+Same as those above, except this one only has drawings, no gifs or videos. Well-organized.
+- This one has a github account to the code for the website itself! Openly welcomes others to contribute, download, adjust, and use.
+- One place under the developer page shows a copyright, however, everywhere you will see many other people contributing and using the code itself. As long as we mention "Roland Geider" as the source creator, we will be fine.
+
+https://github.com/davejt/exercise
+An API of a list of common exercises and muscle groups. Free to use in any app. No copyright.
+- not sure it would be useful. Looks like a program that simply finds the name of exercises when someone initiates a search
+
