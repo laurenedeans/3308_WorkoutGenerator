@@ -16,3 +16,5 @@ https://github.com/davejt/exercise
 An API of a list of common exercises and muscle groups. Free to use in any app. No copyright.
 - not sure it would be useful. Looks like a program that simply finds the name of exercises when someone initiates a search
 
+
+Okay, trying to push this into my branch!  Grrrr.
