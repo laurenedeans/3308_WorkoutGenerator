@@ -11,6 +11,32 @@ Abdominals = []
 Cardio = []
 Chest = []
 
+def main():
+    if len(sys.argv)==1:
+        print("\nUsage: ./WorkoutScript_ds.py WORKOUT_LENGTH TARGET_AREA")
+        print(" -- WORKOUT_LENGTH = short (30min), medium (45min), long (60min)\n")
+    else:
+        length = sys.argv[1]
+        start_wkout(length)
+
+def start_wkout(length_choice):
+    WORKOUT_LENGTH = length_choice
+    f = open('Exercises.csv')
+    csv_f = csv.reader(f)
+
+    # group exercises by muscle group
+    for row in csv_f:
+        if row[1]=='Arms': Arms.append(row)
+        elif row[1]=='Legs': Legs.append(row)
+        elif row[1]=='Back': Back.append(row)
+        elif row[1]=='Abdominals': Abdominals.append(row)
+        elif row[1]=='Cardio': Cardio.append(row)
+        elif row[1]=='Chest': Chest.append(row)
+    print("\nHere is your", WORKOUT_LENGTH, "workout:\n")
+    if WORKOUT_LENGTH == "short": make_workout(2,2,1,1,0)
+    elif WORKOUT_LENGTH == "medium": make_workout(2,2,1,1,3)
+    elif WORKOUT_LENGTH == 'long': make_workout(2,3,3,1,3)
+
 # Uses one function to create workouts of different lengths
 def make_workout(arm_no, leg_no, back_no, chest_no, abs_no):
 	Workout = []
@@ -24,7 +50,6 @@ def make_workout(arm_no, leg_no, back_no, chest_no, abs_no):
 		Workout.append(random.choice(Chest))
 	for i in range(abs_no):
 		Workout.append(random.choice(Abdominals))
-	print("\nHere is your", WORKOUT_LENGTH, "workout:\n")
 	
 	print("Arm Exercises ("+str(arm_no)+" randomly chosen):")
 	for i in range(arm_no):
@@ -47,25 +72,9 @@ def make_workout(arm_no, leg_no, back_no, chest_no, abs_no):
 		print("\t",Workout[i+arm_no+leg_no+back_no+chest_no][0], "--", Workout[i+arm_no+leg_no+back_no+chest_no][1], "("+Workout[i+arm_no+leg_no+back_no+chest_no][2]+")", "--", Workout[i+arm_no+leg_no+back_no+chest_no][3]+",", Workout[i+arm_no+leg_no+back_no+chest_no][4])
 	print("\n")
 
-# "main"
-if len(sys.argv)==1:
-	print("\nUsage: ./WorkoutScript_ds.py WORKOUT_LENGTH TARGET_AREA")
-	print(" -- WORKOUT_LENGTH = short (30min), medium (45min), long (60min)\n")
-else:
-	WORKOUT_LENGTH = sys.argv[1]
 
-	f = open('Exercises.csv')
-	csv_f = csv.reader(f)
 
-	# group exercises by muscle group
-	for row in csv_f:
-		if row[1]=='Arms': Arms.append(row)
-		elif row[1]=='Legs': Legs.append(row)
-		elif row[1]=='Back': Back.append(row)
-		elif row[1]=='Abdominals': Abdominals.append(row)
-		elif row[1]=='Cardio': Cardio.append(row)
-		elif row[1]=='Chest': Chest.append(row)
+#if __name__ == "__main__":
+ #   main()
+main()
 
-	if WORKOUT_LENGTH == "short": make_workout(2,2,1,1,0)
-	elif WORKOUT_LENGTH == "medium": make_workout(2,2,1,1,3)
-	elif WORKOUT_LENGTH == 'long': make_workout(2,3,3,1,3)
