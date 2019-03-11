@@ -3,20 +3,42 @@
   <head>
     <link href="workoutpage.css" type="text/css" rel="stylesheet"/>
     <title> Team 2 Final Project </title>
+    <script type="text/javascript">
+      function showInput() {
+        var focus = document.getElementsByName('focus');
+        var equip = document.getElementsByName('equip');
+        var length = document.getElementById('length').value;
+        var level = document.getElementById('level').value;
+        var focus_select = [];
+        var equip_select = [];
+        for (var i=0; i<focus.length; i++) {
+          if (focus[i].checked) {
+            focus_select.push(focus[i].value);
+          }
+        }
+        for (var i=0; i<equip.length; i++) {
+          if (equip[i].checked) {
+            equip_select.push(equip[i].value);
+          }
+        }
+        alert("You will get a(n) " + length + " " + level + " workout for your: " + focus_select + "\n" +
+        "Using the following equipment: " + equip_select);
+      }
+    </script>
   </head>
 
   <body>
     <div id="menu">
         <p> Make a workout! </p>
-        <form>
+        <form id="workout" onsubmit="showInput()">
           <fieldset>
             <legend> Your preferences... </legend>
             <label> Focus area </label> </br>
-            <input type="checkbox" name="focus" value="arms" > Arms <br>
-            <input type="checkbox" name="focus" value="legs" > Legs <br>
-            <input type="checkbox" name="focus" value="chest" > Chest <br>
-            <input type="checkbox" name="focus" value="core" > Core <br>
-            <input type="checkbox" name="focus" value="fullbody" > Full Body <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="arms" > Arms <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="legs" > Legs <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="chest" > Chest <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="core" > Core <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="fullbody" > Full Body <br>
             <br> <br>
             <label> Gym equipment </label> </br>
             <input type="checkbox" name="equip" value="dumbells" > Dumbells <br>
@@ -30,30 +52,29 @@
 
             <br> <br>
             <label> How long? </label>
-            <select>
+            <select id="length">
               <option value=0> Length: </option>
-              <option value="l"> Long (45-60 mins)</option>
-              <option value="m"> Medium (30-45 mins) </option>
-              <option value="s"> Short (15 mins) </option>
+              <option value="long"> Long (45-60 mins)</option>
+              <option value="medium"> Medium (30-45 mins) </option>
+              <option value="short"> Short (15 mins) </option>
             </select>
 
             <br> <br>
             <label> Experience Level? </label>
-            <select>
+            <select id="level">
               <option value=0> Your experience level: </option>
-              <option value="b"> Beginner </option>
-              <option value="i"> Intermediate </option>
-              <option value="a"> Advanced </option>
+              <option value="beginner"> Beginner </option>
+              <option value="intermediate"> Intermediate </option>
+              <option value="advanced"> Advanced </option>
             </select>
 
             <br> <br>
-            <button class="buttons" type="submit" value="Submit"> Make my workout! </button>
-            <button class="buttons" type="reset" value="Reset">Start Over</button>
+            <input class="buttons" type="submit" value="Submit">
+            <input class="buttons" type="reset" value="reset">
 
-            <output name="workout" for "focus equip length experience"></output>
           </fieldset>
         </form>
-
+    </div>
   </body>
 </html>
 
