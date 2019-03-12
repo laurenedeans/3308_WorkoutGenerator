@@ -9,6 +9,7 @@
         var equip = document.getElementsByName('equip');
         var length = document.getElementById('length').value;
         var level = document.getElementById('level').value;
+        var goal = document.getElementById('goal').value;
         var focus_select = [];
         var equip_select = [];
         for (var i=0; i<focus.length; i++) {
@@ -21,7 +22,7 @@
             equip_select.push(equip[i].value);
           }
         }
-        alert("You will get a(n) " + length + " " + level + " workout for your: " + focus_select + "\n" +
+        alert("You will get a(n) " + length + " " + level + " workout for your: " + focus_select + "\n" + "Workout Goal:" + goal +"\n" +
         "Using the following equipment: " + equip_select);
       }
     </script>
@@ -66,6 +67,15 @@
               <option value="beginner"> Beginner </option>
               <option value="intermediate"> Intermediate </option>
               <option value="advanced"> Advanced </option>
+            </select>
+
+            <br> <br>
+            <label> Goal? </label>
+            <select id="goal">
+              <option value=0> Your exercise goal: </option>
+              <option value="Increase Muscle Mass"> Build Muscle Mass </option>
+              <option value="Increase Strength"> Increase Muscular Strength </option>
+              <option value="Increase Endurance"> Increase Muscular Endurance </option>
             </select>
 
             <br> <br>
