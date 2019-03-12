@@ -1,0 +1,60 @@
+/* the css rules for workoutpage.html */
+
+/* All div sections */
+div {
+  border: #673ab7;
+  border-width: 9pt;
+  float: left;
+  margin: 5px;
+  width: 80%;
+}
+
+/* All 2nd-level div sections */
+div div {
+  border: #3f51b5;
+  border-style: solid;
+  border-width: medium;
+  float: left;
+  clear: left;
+  margin-right: 0pc;
+  width: 10pc;
+  padding: 5px;
+}
+
+div div#length {
+  clear: right;
+  float: right;
+}
+
+div div#experience {
+  clear: right;
+  float: right;
+}
+
+div div#buttons {
+  margin: 14%;
+  width: 96%;
+  text-align: center;
+  padding-right: 5pc;
+}
+
+.buttons {
+  padding: 6px;
+  margin-right: 5pc;
+  margin-left: 5pc;
+}
+
+/* Info div only. */
+div#info {
+  float: right;
+  width: 10pc;
+  overflow-wrap: normal;
+}
+
+/* Menu div <p> sections. */
+div#menu p {
+  font-weight: bold;
+  font-size: 16pt;
+  text-align: center;
+}
+

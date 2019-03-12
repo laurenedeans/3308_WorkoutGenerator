@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="workoutpage.css" type="text/css" rel="stylesheet"/>
+    <title> Team 2 Final Project </title>
+    <script type="text/javascript">
+      function showInput() {
+        var focus = document.getElementsByName('focus');
+        var equip = document.getElementsByName('equip');
+        var length = document.getElementById('length').value;
+        var level = document.getElementById('level').value;
+        var focus_select = [];
+        var equip_select = [];
+        for (var i=0; i<focus.length; i++) {
+          if (focus[i].checked) {
+            focus_select.push(focus[i].value);
+          }
+        }
+        for (var i=0; i<equip.length; i++) {
+          if (equip[i].checked) {
+            equip_select.push(equip[i].value);
+          }
+        }
+        alert("You will get a(n) " + length + " " + level + " workout for your: " + focus_select + "\n" +
+        "Using the following equipment: " + equip_select);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="menu">
+        <p> Make a workout! </p>
+        <form id="workout" onsubmit="showInput()">
+          <fieldset>
+            <legend> Your preferences... </legend>
+            <label> Focus area </label> </br>
+            <input type="checkbox" class="focus_choices" name="focus" value="arms" > Arms <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="legs" > Legs <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="chest" > Chest <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="core" > Core <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="fullbody" > Full Body <br>
+            <br> <br>
+            <label> Gym equipment </label> </br>
+            <input type="checkbox" name="equip" value="dumbells" > Dumbells <br>
+            <input type="checkbox" name="equip" value="barbell" > Barbell <br>
+            <input type="checkbox" name="equip" value="medball" > Medicine Ball <br>
+            <input type="checkbox" name="equip" value="jumprope" > Jump Rope <br>
+            <input type="checkbox" name="equip" value="stationarybike" > Stationary Bike <br>
+            <input type="checkbox" name="equip" value="treadmill" > Treadmill <br>
+            <input type="checkbox" name="equip" value="elliptical" > Elliptical <br>
+            <input type="checkbox" name="equip" value="fullgym" > Full Gym <br>
+
+            <br> <br>
+            <label> How long? </label>
+            <select id="length">
+              <option value=0> Length: </option>
+              <option value="long"> Long (45-60 mins)</option>
+              <option value="medium"> Medium (30-45 mins) </option>
+              <option value="short"> Short (15 mins) </option>
+            </select>
+
+            <br> <br>
+            <label> Experience Level? </label>
+            <select id="level">
+              <option value=0> Your experience level: </option>
+              <option value="beginner"> Beginner </option>
+              <option value="intermediate"> Intermediate </option>
+              <option value="advanced"> Advanced </option>
+            </select>
+
+            <br> <br>
+            <input class="buttons" type="submit" value="Submit">
+            <input class="buttons" type="reset" value="reset">
+
+          </fieldset>
+        </form>
+    </div>
+  </body>
+</html>
+
