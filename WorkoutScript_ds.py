@@ -24,8 +24,12 @@ with open('Exercises.csv', 'r') as f:
 # main function catches any errors in calling on program.
 def main():
     if len(sys.argv)==1:
-        print("\nUsage: ./WorkoutScript_ds.py WORKOUT_LENGTH")
-        print(" -- WORKOUT_LENGTH = short (30min), medium (45min), long (60min)\n")
+        print("\nUsage: ./WorkoutScript_ds.py WORKOUT_LENGTH TARGET_AREA EQUIPMENT EXPERIENCE GOAL")
+        print(" -- WORKOUT_LENGTH = short (30min), medium (45min), long (60min)")
+        print(" -- TARGET_AREA = Arms, Legs, Chest, Back, Abdominals, Cardio")
+        print(" -- EQUIPMENT = Dumbells, Bar, Machine, Body Weight, Medicine Ball, Jump rope, Pool, Bicycle, ANY, NONE")
+        print(" -- EXPERIENCE = Beginner, Intermediate, Advanced")
+        print(" -- GOAL = 
     else:
         length = sys.argv[1]
         start_wkout(length)
