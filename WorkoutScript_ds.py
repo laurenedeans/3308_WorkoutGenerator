@@ -24,14 +24,22 @@ with open('Exercises.csv', 'r') as f:
 # main function catches any errors in calling on program.
 def main():
     if len(sys.argv)==1:
-        print("\nUsage: ./WorkoutScript_ds.py WORKOUT_LENGTH TARGET_AREA EQUIPMENT EXPERIENCE GOAL")
+        print("\nUsage: ./WorkoutScript_ds.py WORKOUT_LENGTH TARGET_AREA EXPERIENCE GOAL EQUIPMENT")
         print(" -- WORKOUT_LENGTH = short (30min), medium (45min), long (60min)")
-        print(" -- TARGET_AREA = Arms, Legs, Chest, Back, Abdominals, Cardio")
-        print(" -- EQUIPMENT = Dumbells, Bar, Machine, Body Weight, Medicine Ball, Jump rope, Pool, Bicycle, ANY, NONE")
+        print(" -- TARGET_AREA = Arms, Legs, Chest, Back, Abdominals, NONE")
         print(" -- EXPERIENCE = Beginner, Intermediate, Advanced")
-        print(" -- GOAL = 
+        print(" -- GOAL = Mass, Strength, Endurance")
+        print(" -- EQUIPMENT = Dumbells, Bar, Machine, Body Weight, Medicine Ball, Jump rope, Pool, Bicycle, ANY, NONE\n")
     else:
         length = sys.argv[1]
+        EXPERIENCE = sys.argv[3]
+        GOAL = sys.argv[4]
+        argc = len(sys.argv)
+        EQUIPMENT = ["Body Weight"]
+        for i in range(5,argc):
+            EQUIPMENT.append(sys.argv[i])
+        #print(length, EXPERIENCE, GOAL, EQUIPMENT, "\n")
+        filter_exer(muscle_group, EQUIPMENT, EXPERIENCE)
         start_wkout(length)
 
 # This is part of the program that captures the person's choices.
@@ -46,6 +54,15 @@ def start_wkout(length_choice):
 # Uses one function to create workouts of different lengths
 def make_workout(arm_no, leg_no, back_no, chest_no, abs_no):
     Workout = []
+
+    # adds additional exercises for targetted muscle group
+    TARGET_AREA = sys.argv[2] # does nothing if NONE is selected
+    if TARGET_AREA == "Arms": arm_no = arm_no + 2
+    elif TARGET_AREA == "Legs": leg_no = leg_no + 2
+    elif TARGET_AREA == "Back": back_no = back_no + 2
+    elif TARGET_AREA == "Chest": chest_no = chest_no + 2
+    elif TARGET_AREA == "Abdominals": abs_no = abs_no + 2
+
     focus_num = OrderedDict({
         'Arms': arm_no,
         'Legs': leg_no,
@@ -68,7 +85,21 @@ def make_workout(arm_no, leg_no, back_no, chest_no, abs_no):
 	
     return Workout
 
-
+# Filter list of exercises 
+def filter_exer(MuscleGroup, Equipment, Experience):
+    print("Filtered Exercises:")
+    for area, exercise_list in MuscleGroup.items():
+        for exercise in exercise_list:
+            if Experience == "Advanced":
+                if exercise[3] in Equipment:
+                    print(exercise[0], "\n\t -- ", exercise[3], " -- ", exercise[5])
+            elif Experience == "Intermediate":
+                if (exercise[3] in Equipment) & (exercise[5] != "Advanced"):
+                    print(exercise[0], "\n\t -- ", exercise[3], " -- ", exercise[5])
+            else:
+                if (exercise[3] in Equipment) & (exercise[5] == "Beginner"):
+                    print(exercise[0], "\n\t -- ", exercise[3], " -- ", exercise[5])
+    print("\n\n")
 
 #if __name__ == "__main__":
  #   main()
