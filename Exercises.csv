@@ -1,51 +1,101 @@
 Exercise Name,Major Muscle Group,Minor Muscle Group,Equipment,Exercise Type,Experience Level
-Bicep Curl,Arms,Biceps,"Dumbells, Bar, Machine, Cables",Resistance Training,Beginner
-Bench Press,Arms,Chest,"Bar, Machine",Resistance Training,Intermediate
-Lat Pulldown,Back,Latissimus Dorsi,Machine,Resistance Training,Beginner
-Tricep Pushdown,Arms,Triceps,"Machine, Cables",Resistance Training,Intermediate
-Back Squat,Legs,"Quadriceps, Glutes","Bar, Body Weight",Resistance Training,Intermediate
-Elliptical Trainer,Legs,"Quadriceps, Glutes",Machine,Cardio,Beginner
-Plank,Abdominals,Obliques,Body Weight,Abs,Intermediate
+Ab Hold,Abdominals,Obliques,Body Weight,Abs,Beginner
 Bicycle Crunch,Abdominals,Obliques,Body Weight,Abs,Intermediate
-Incline Chest Press,Chest,"Anterior Deltoid, Triceps","Bar, Machine, Dumbbells",Resistance Training,Advanced
-Lunges,Legs,"Hamstrings, Glutes, Quadriceps","Body Weight, Bar, Plate",Resistance Training,Beginner
-Seated Row,Back,"Latissimus Dorsi, Biceps, Triceps",Machine,Resistance Training,Intermediate
-Treadmill,Legs,"Quadriceps, Glutes, Hamstrings",Machine,Cardio,Beginner
-Dumbbell Fly,Chest,Anterior Deltoid,Dumbells,Resistance Training,Intermediate
-Skull Crusher,Arms,Triceps,"Bar, Dumbbells",Resistance Training,Advanced
-Calf Raises,Legs,"Gastrocnemius, Soleus","Machine, Bar, Plates, Body Weight",Resistance Training,Beginner
-Leg Extension,Legs,Quadriceps,"Machine, Cables, Bands",Resistance Training,Intermediate
-Leg Curl,Legs,Hamstrings,"Machine, Cables, Bands",Resistance Training,Intermediate
+Crunch,Abdominals,Obliques,"Body Weight, Medicine Ball, Dumbell",Abs,Beginner
+Leg Raises,Abdominals,Obliques,Body Weight,Abs,Beginner
+Reverse Crunch,Abdominals,"Lower abdominals, Hip Flexors",Body Weight,Abs,Beginner
 Russian Twists,Abdominals,Obliques,"Medicine Ball, Body Weight",Abs,Intermediate
-V-ups,Abdominals,Hip Flexors,"Body Weight, Plate",Abs,Advanced
-Front Squat,Legs,"Quadriceps, Glutes",Bar,Resistance Training,Advanced
-Dead-Lift,Legs,"Quadriceps, Glutes, Hamstrings",Bar,Resistance Training,Advanced
-Jump Rope,Legs,"Quadriceps, Glutes, Hamstrings",Jump rope,Cardio,Beginner
-Swimming,Full body,Full body,Pool,Cardio,Beginner
-Stairmaster,Legs,"Quadriceps, Glutes, Hamstrings",Machine,Cardio,Beginner
-Bicycle,Legs,"Quadriceps, Glutes","Bicycle, Machine",Cardio,Beginner
+Scissor Kicks,Abdominals,Obliques,Body Weight,Abs,Beginner
 Side Plank,Abdominals,Obliques,Body Weight,Abs,Intermediate
-Shoulder Press,Arms,Deltoids,"Machine, Bar, Dumbbells",Resistance Training,Intermediate
-Tricep Extensions,Arms,Triceps,"Dumbells, Cables, Machine",Resistance Training,Intermediate
-Military Press,Arms,Deltoids,"Bar, Dumbbells",Resistance Training,Advanced
-Diamond Push-Ups,Arms,"Triceps, Deltoids, Chest",Body Weight,Resistance Training,Advanced
-Bent Over Row,Back,Biceps,"Bar, Dumbbells, Plate",Resistance Training,Intermediate
-Box Jumps,Legs,"Quadriceps, Glutes, Hamstrings",Box,Resistance Training,Advanced
-Burpee,Full Body,Full body,Body Weight,Abs,Beginner
-Chest Fly,Chest,"Biceps, Deltoids, Pectoralis Major","Cables, Dumbbells, Bands, RX/Rings, Machine",Resistance Training,Beginner
-Chin Ups,Back,"Biceps, Latissimus Dorsi, Deltoids","Body Weight, Machine",Resistance Training,Intermediate
+Sit ups,Abdominals,Obliques,Body Weight,Abs,Beginner
+Straight Arm Plank,Abdominals,Obliques,Body Weight,Abs,Intermediate
+V-ups,Abdominals,Hip Flexors,"Body Weight, Plate",Abs,Advanced
+Arnold Press,Arms,"Bicep,Shoulders",Dumbbells,Resistance Training,Beginner
+Bicep Curl,Arms,Biceps,"Dumbells, Bar, Machine, Cables",Resistance Training,Beginner
+Chest Press,Arms,Chest,Dumbbells,Resistance Training,Beginner
 Close Grip Bench Press,Arms,"Triceps, Pectoralis Major, Pectoralis Minor",Bar,Resistance Training,Advanced
+Diamond Push-Ups,Arms,"Triceps, Deltoids, Chest",Body Weight,Resistance Training,Advanced
 Front Raise,Arms,Deltoids,"Bar, Plate, Dumbbells",Resistance Training,Intermediate
 Hammer Curl,Arms,Biceps,Dumbbells,Resistance Training,Advanced
+Military Press,Arms,Deltoids,"Bar, Dumbbells",Resistance Training,Advanced
+Rowing Machine,Arms,Full Body,Machine,Cardio,Intermediate
+Shoulder Press,Arms,Deltoids,"Machine, Bar, Dumbbells",Resistance Training,Intermediate
+Shoulder Shrugs,Arms,"Deltoids, Latissimus Dorsi","Dumbbells, Bar ",Resistance Training,Intermediate
+Skull Crusher,Arms,Triceps,"Bar, Dumbbells",Resistance Training,Advanced
+Tricep Dip,Arms,"Triceps, Deltoids","Body Weight, Machine",Resistance Training,Intermediate
+Tricep Extensions,Arms,Triceps,"Dumbells, Cables, Machine",Resistance Training,Intermediate
+Tricep Pushdown,Arms,Triceps,"Machine, Cables",Resistance Training,Intermediate
+Back Extension,Back,"Glutes, Hamstrings","Body Weight, Bosu Ball",Resistance Training,Intermediate
+Bent Over Row - Overhand Grip,Back,Biceps,"Bar, Dumbbells, Plate",Resistance Training,Intermediate
+Bent Over Row - Underhand Grip,Back,Rhomboids,"Bar, Dumbbells, Plate",Resistance Training,Intermediate
+Chin Ups,Back,"Biceps, Latissimus Dorsi, Deltoids","Body Weight, Machine",Resistance Training,Intermediate
+Lat Pulldown,Back,Latissimus Dorsi,Machine,Resistance Training,Beginner
+Pull Ups,Back,"Biceps, Deltoids, Latissimus Dorsi",Body Weight,Resistance Training,Advanced
+Renegade Row,Back,"Latissimus Dorsi, Rhomboids, Obliques, Triceps, Forearms",Dumbbells,Resistance Training,Intermediate
+Reverse Fly,Back,"Posterior Deltoid, Rhomboid, Trapezius","Dumbells, Cables, Machine",Resistance Training,Beginner
+Seated Row,Back,"Latissimus Dorsi, Biceps, Triceps",Machine,Resistance Training,Intermediate
+Superman,Back,"Glutes, Hamstrings",Body Weight,Resistance Training,Beginner
+Upright Row,Back,"upper trapezius, deltoids and biceps","Dumbbells, Cable",Resistance Training,Beginner
+Bench Press,Chest,"Deltoids, Triceps","Bar, Machine",Resistance Training,Intermediate
+Butterfly,Chest,,Machine,Resistance Training,Beginner
+Cable Cross Over Fly,Chest,,Cables,Resistance Training,Beginner
+Chest Fly,Chest,"Biceps, Deltoids, Pectoralis Major","Cables, Dumbbells, Bands, RX/Rings, Machine",Resistance Training,Beginner
+Decline Pushup ,Chest,Abs,Body Weight,Resistance Training,Advanced
+Dive Bomber Push Up,Chest,Abs,Body Weight,Resistance Training,Intermediate
+Dumbbell Fly,Chest,Anterior Deltoid,Dumbells,Resistance Training,Intermediate
+Hammer Press,Chest,,Machine,Resistance Training,Beginner
+Incline Chest Press,Chest,"Anterior Deltoid, Triceps","Bar, Machine, Dumbbells",Resistance Training,Advanced
+Push Ups,Chest,"Triceps, Pectoralis Major, Pectoralis Minor",Body Weight,Resistance Training,Beginner
+Burpee,Full Body,Full body,Body Weight,Cardio,Beginner
+Butt Kicks,Full Body,"Hamstrings, Glutes",Body Weight,Cardio,Beginner
+Crab Crawl,Full Body,"Abs, Arms",Body Weight,Cardio,Beginner
+High Knee Skip,Full Body,Legs,Body Weight,Cardio,Beginner
+High Knees,Full body,"Calves, Quadriceps, Abs, Glutes",Body Weight,Cardio,Intermediate
+Jumping Jacks,Full Body,Full Body,Body Weight,Cardio,Beginner
+Kettle Bell Swing,Full Body,"Abs, Arms","Kettlebell, Dumbells",Cardio,Intermediate
+Knee Drive,Full Body,"Glutes, Abs",Body Weight,Cardio,Beginner
+Mountain Climbers,Full Body,Abdominals,"Body Weight, Bosu Ball",Cardio,Intermediate
+Plank chest tap,Full body,"Abs, Shoulders",Body Weight,Resistance Training,Intermediate
+Plank Jacks,Full Body,Abs,Body Weight,Cardio,Intermediate
+Plank leg raise,Full body,"Abs, Glutes",Body Weight,Resistance Training,Intermediate
+Plank Rollout,Full Body,,Bosu Ball,Resistance Training,Intermediate
+Plank Rotation,Full Body,,"Body Weight, Dumbells",Resistance Training,Intermediate
+Run in Place,Full Body,"Quadriceps, Glutes, Calves",Body Weight,Cardio,Beginner
+Swimming,Full body,Full body,Pool,Cardio,Beginner
+Back Lunges - Stationary,Legs,"Glutes, Quadriceps, Calves","Body Weight, Dumbell",Resistance Training,Beginner
+Back Squat,Legs,"Quadriceps, Glutes","Bar, Body Weight",Resistance Training,Intermediate
+Bicycle,Legs,"Quadriceps, Glutes","Bicycle, Machine",Cardio,Beginner
+Box Jumps,Legs,"Quadriceps, Glutes, Hamstrings",Box,Resistance Training,Advanced
+Bridge,Legs,Glutes,"Body Weight, Dumbells, Plate",Resistance Training,Beginner
+Calf Raises,Legs,"Gastrocnemius, Soleus","Machine, Bar, Plates, Body Weight",Resistance Training,Beginner
+Curtsy Lunges,Legs,"Glutes, Quadriceps, Hamstrings","Body Weight, Dumbell",Resistance Training,Beginner
+Deadlift,Legs,"Quadriceps, Glutes, Hamstrings",Bar,Resistance Training,Advanced
+Donkey Kick,Legs,Glutes,"Dumbbells, Band, Body Weight",Resistance Training,Beginner
+Elliptical Trainer,Legs,"Quadriceps, Glutes",Machine,Cardio,Beginner
+Figure Skaters,Legs,"Glutes, Hamstrings",Body Weight,Cardio,Intermediate
+Fire Hydrant,Legs,"Glutes, Thigh","Band, Body Weight",Resistance Training,Beginner
+Front Lunges - Stationary,Legs,"Glutes, Quadriceps, Calves","Body Weight, Dumbell",Resistance Training,Beginner
+Front Squat,Legs,"Quadriceps, Glutes","Bar, Body Weight",Resistance Training,Advanced
 Hip Abduction,Legs,Glutes,"Machine,Cables, Bands",Resistance Training,Intermediate
 Hip Adduction,Legs,Glutes,Machine,Resistance Training,Intermediate
-Mountain Climbers,Full Body,Abdominals,"Body Weight, Bosu Ball",Abs,Intermediate
+Jump Rope,Legs,"Quadriceps, Glutes, Hamstrings",Jump rope,Cardio,Beginner
+Leg Curl,Legs,Hamstrings,"Machine, Cables, Bands",Resistance Training,Intermediate
+Leg Extension,Legs,Quadriceps,"Machine, Cables, Bands",Resistance Training,Intermediate
+Lunges,Legs,"Hamstrings, Glutes, Quadriceps","Body Weight, Bar, Plate",Resistance Training,Beginner
+Lying Side Leg Raise,Legs,Glutes,"Body Weight, Resistance Band",Resistance Training,Beginner
 Power Clean,Legs,"Deltoids, Hamstrings",Bar,Resistance Training,Advanced
-Pull Ups,Back,"Biceps, Deltoids, Latissimus Dorsi",Body Weight,Resistance Training,Advanced
-Push Ups,Chest,"Triceps, Pectoralis Major, Pectoralis Minor",Body Weight,Resistance Training,Beginner
-Rowing Machine,Arms,Full Body,Machine,Cardio,Intermediate
-Shoulder Shrugs,Arms,"Deltoids, Latissimus Dorsi","Dumbbells, Bar ",Resistance Training,Intermediate
+Romanian Deadlift,Legs,"Glutes, Hamstrings",Dumbells,Resistance Training,Beginner
+Side Lunges,Legs,"Glutes, Quadriceps, Hamstrings","Body Weight, Dumbell",Resistance Training,Beginner
 Sprints,Legs,"Quads,Glutes,Calves","Body Weight, Machine",Cardio,Beginner
+Squat Jumps,Legs,"Quadriceps, Glutes","Body Weight, Dumbell",Cardio,Intermediate
+Stair Climber,Legs,Glutes,Machine,Cardio,Beginner
+Stairmaster,Legs,"Quadriceps, Glutes, Hamstrings",Machine,Cardio,Beginner
+Standing Front Leg Lift,Legs,Quadriceps,"Body Weight, Band, Cables",Resistance Training,Beginner
+Standing Glute Kickbacks,Legs,Glutes,"Body Weight, Band, Cables",Resistance Training,Beginner
+Standing Side Leg Lift,Legs,Glutes,"Body Weight, Band, Cables",Resistance Training,Beginner
+Step Ups,Legs,"Quadriceps, Glutes, Hamstrings","Box, Bench",Cardio,Beginner
 Step-Back Lunge,Legs,"Quads, Glutes, Calves","Bar, Body Weight ,Dumbbells",Resistance Training,Intermediate
-Tricep Dip,Arms,"Triceps, Deltoids","Body Weight, Machine",Resistance Training,Intermediate
-Figure Skaters,Legs,"Glutes, Hamstrings",Body Weight,Abs,Intermediate
+Sumo Squat,Legs,"Glutes, Hamstrings, Quadriceps","Body Weight, Dumbells, Plate",Resistance Training,Beginner
+Treadmill,Legs,"Quadriceps, Glutes, Hamstrings",Machine,Cardio,Beginner
+Walking Lunges,Legs,"Glutes, Quadriceps, Calves","Body Weight, Dumbell",Resistance Training,Beginner
+Wall Squat,Legs,"Quadriceps, Glutes","Body Weight, Dumbells",Resistance Training,Intermediate
