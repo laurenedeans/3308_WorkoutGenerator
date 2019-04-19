@@ -23,7 +23,7 @@ Shoulder Press,Arms,Deltoids,"Machine, Bar, Dumbbells",Resistance Training,Inter
 Shoulder Shrugs,Arms,"Deltoids, Latissimus Dorsi","Dumbbells, Bar ",Resistance Training,Intermediate
 Skull Crusher,Arms,Triceps,"Bar, Dumbbells",Resistance Training,Advanced
 Tricep Dip,Arms,"Triceps, Deltoids","Body Weight, Machine",Resistance Training,Intermediate
-Tricep Extensions,Arms,Triceps,"Dumbells, Cables, Machine",Resistance Training,Intermediate
+Tricep Extensions,Arms,Triceps,"Dumbbells, Cables, Machine",Resistance Training,Intermediate
 Tricep Pushdown,Arms,Triceps,"Machine, Cables",Resistance Training,Intermediate
 Back Extension,Back,"Glutes, Hamstrings","Machine, Body Weight, Bosu Ball",Resistance Training,Intermediate
 Bent Over Row - Overhand Grip,Back,Biceps,"Bar, Dumbbells, Plate",Resistance Training,Intermediate
@@ -32,7 +32,7 @@ Chin Ups,Back,"Biceps, Latissimus Dorsi, Deltoids","Body Weight, Machine",Resist
 Lat Pulldown,Back,"Latissimus Dorsi","Machine",Resistance Training,Beginner
 Pull Ups,Back,"Biceps, Deltoids, Latissimus Dorsi","Body Weight",Resistance Training,Advanced
 Renegade Row,Back,"Latissimus Dorsi, Rhomboids, Obliques, Triceps, Forearms","Dumbbells",Resistance Training,Intermediate
-Reverse Fly,Back,"Posterior Deltoid, Rhomboid, Trapezius","Dumbells, Cables, Machine",Resistance Training,Beginner
+Reverse Fly,Back,"Posterior Deltoid, Rhomboid, Trapezius","Dumbbells, Cables, Machine",Resistance Training,Beginner
 Seated Row,Back,"Latissimus Dorsi, Biceps, Triceps","Machine",Resistance Training,Intermediate
 Superman,Back,"Glutes, Hamstrings","Body Weight",Resistance Training,Beginner
 Upright Row,Back,"upper trapezius, deltoids and biceps","Dumbbells, Cable",Resistance Training,Beginner
@@ -42,7 +42,7 @@ Cable Cross Over Fly,Chest,,"Cables",Resistance Training,Beginner
 Chest Fly,Chest,"Biceps, Deltoids, Pectoralis Major","Cables, Dumbbells, Bands, RX/Rings, Machine",Resistance Training,Beginner
 Decline Pushup ,Chest,"Abs","Body Weight",Resistance Training,Advanced
 Dive Bomber Push Up,Chest,"Abs","Body Weight",Resistance Training,Intermediate
-Dumbbell Fly,Chest,"Anterior Deltoid","Dumbells",Resistance Training,Intermediate
+Dumbbell Fly,Chest,"Anterior Deltoid","Dumbbells",Resistance Training,Intermediate
 Hammer Press,Chest,,"Machine",Resistance Training,Beginner
 Incline Chest Press,Chest,"Anterior Deltoid, Triceps","Bar, Machine, Dumbbells",Resistance Training,Advanced
 Push Ups,Chest,"Triceps, Pectoralis Major, Pectoralis Minor",Body Weight,Resistance Training,Beginner
@@ -52,21 +52,21 @@ Crab Crawl,Full Body,"Abs, Arms","Body Weight",Cardio,Beginner
 High Knee Skip,Full Body,"Legs","Body Weight",Cardio,Beginner
 High Knees,Full body,"Calves, Quadriceps, Abs, Glutes","Body Weight",Cardio,Intermediate
 Jumping Jacks,Full Body,"Full Body","Body Weight",Cardio,Beginner
-Kettle Bell Swing,Full Body,"Abs, Arms","Kettlebell, Dumbells",Cardio,Intermediate
+Kettle Bell Swing,Full Body,"Abs, Arms","Kettlebell, Dumbbells",Cardio,Intermediate
 Knee Drive,Full Body,"Glutes, Abs",Body Weight,Cardio,Beginner
 Mountain Climbers,Full Body,"Abdominals","Body Weight, Bosu Ball",Cardio,Intermediate
 Plank chest tap,Full body,"Abs, Shoulders","Body Weight",Resistance Training,Intermediate
 Plank Jacks,Full Body,"Abs","Body Weight",Cardio,Intermediate
 Plank leg raise,Full body,"Abs, Glutes","Body Weight",Resistance Training,Intermediate
 Plank Rollout,Full Body,,"Bosu Ball",Resistance Training,Intermediate
-Plank Rotation,Full Body,,"Body Weight, Dumbells",Resistance Training,Intermediate
+Plank Rotation,Full Body,,"Body Weight, Dumbbells",Resistance Training,Intermediate
 Run in Place,Full Body,"Quadriceps, Glutes, Calves","Body Weight",Cardio,Beginner
 Swimming,Full body,"Full body","Pool",Cardio,Beginner
 Back Lunges - Stationary,Legs,"Glutes, Quadriceps, Calves","Body Weight, Dumbell",Resistance Training,Beginner
 Back Squat,Legs,"Quadriceps, Glutes","Bar, Body Weight",Resistance Training,Intermediate
 Bicycle,Legs,"Quadriceps, Glutes","Bicycle, Machine",Cardio,Beginner
 Box Jumps,Legs,"Quadriceps, Glutes, Hamstrings","Box",Resistance Training,Advanced
-Bridge,Legs,"Glutes","Body Weight, Dumbells, Plate",Resistance Training,Beginner
+Bridge,Legs,"Glutes","Body Weight, Dumbbells, Plate",Resistance Training,Beginner
 Calf Raises,Legs,"Gastrocnemius, Soleus","Machine, Bar, Plates, Body Weight",Resistance Training,Beginner
 Curtsy Lunges,Legs,"Glutes, Quadriceps, Hamstrings","Body Weight, Dumbell",Resistance Training,Beginner
 Deadlift,Legs,"Quadriceps, Glutes, Hamstrings","Bar",Resistance Training,Advanced

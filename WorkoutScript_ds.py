@@ -109,7 +109,7 @@ def filter_exer(MuscleGroup, EQUIPMENT, EXPERIENCE):
         valid_exercises = []
         for exercise in exercise_list:
             if EXPERIENCE == "Advanced":
-                if exercise[3] in EQUIPMENT:
+                if (exercise[3] in EQUIPMENT):
                     print(exercise[0], "\n\t -- ", exercise[1], " -- ", exercise[3], " -- ", exercise[5])
                     valid_exercises.append(exercise)
             elif EXPERIENCE == "Intermediate":
