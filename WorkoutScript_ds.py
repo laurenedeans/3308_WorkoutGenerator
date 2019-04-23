@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import os
 import sys
 import csv
@@ -24,34 +25,53 @@ with open('Exercises.csv', 'r') as f:
 # Calling w/ 1 arg: ./WorkoutScript_ds.py
 # main function catches any errors in calling on program.
 def main():
-    if len(sys.argv)==1:    # Usage statement to show how to call the script (type "./WorkoutScript_ds.py")
-        print("\nUsage: ./WorkoutScript_ds.py WORKOUT_LENGTH TARGET_AREA EXPERIENCE GOAL EQUIPMENT")
-        print(" -- WORKOUT_LENGTH = short (30min - 6 exercises), medium (45min - 9 exercises), long (60min - 12 exercises)")  # sys.argv[1]
-        print(" -- TARGET_AREA = Arms, Legs, Chest, Back, Abdominals, NONE")  # sys.argv[2]
-        print(" -- EXPERIENCE = Beginner, Intermediate, Advanced")  # sys.argv[3]
-        print(" -- GOAL = Mass, Strength, Endurance")  # sys.argv[4]  (Sets & Reps & Weight choices)
-        print(" -- EQUIPMENT = Dumbells, Bar, Machine, Body Weight, Medicine Ball, Jump rope, Pool, Bicycle, ANY, NONE\n")  # sys.argv[5] ....
-        # bicep curls "bar, dumbell, kettlebell" --> EQUIPMENT "bar, dumbell" --> bicep curls "bar, dumbell" 
-    else:
-        # Command line arguments
-        if (sys.argv[1] == "short"):
-            WORKOUT_LENGTH = 6
-        elif (sys.argv[1] == "medium"):
-            WORKOUT_LENGTH = 9
-        else:
-            WORKOUT_LENGTH = 12
-        TARGET_AREA = (1,0,1,0,1)
-        EXPERIENCE = sys.argv[3]
-        GOAL = sys.argv[4]
-        argc = len(sys.argv)
-        EQUIPMENT = ["Body Weight"]
-        for i in range(5,argc):                           # appends list of equipment options from command line input
-            EQUIPMENT.append(sys.argv[i])
-        filter_exer(muscle_group, EQUIPMENT, EXPERIENCE)  # filters existing dictionary to only contain valid exercises
-        workout_dist = distribute_exercise(WORKOUT_LENGTH, np.array(TARGET_AREA)) # returns np.array that gives number of exercises for each muscle group                            
-        print(workout_dist)
-        make_workout(workout_dist[0], workout_dist[1], workout_dist[2], workout_dist[3], workout_dist[4]) # pulls exercises from exercise dictionary
-        
+    areas = 'Arms,Legs,Chest,Back,Abdominals'.split(',')
+    equipment = 'Dumbells, Bar, Machine, Body Weight, Medicine Ball, Jump rope, Pool, Bicycle'
+    parser = argparse.ArgumentParser(description='Workout generator')
+    parser.add_argument('-L', '--WORKOUT_LENGTH',
+            choices=['short', 'medium', 'long'],
+            required=True,
+            help='Lenght of workout: short (30min - 6 exercises), medium (45min - 9 exercises), long (60min - 12 exercises)',
+            )
+    parser.add_argument('-E', '--EXPERIENCE',
+            choices=['Beginner', 'Intermediate', 'Advanced'],
+            required=True,
+            help='User experience level',
+            )
+    parser.add_argument('-A', '--TARGET_AREA',
+            nargs='*', # All input args are gathered into a list
+            help=f'Target areas: {areas}',
+            )
+    parser.add_argument('-G', '--GOAL',
+            choices=['Mass', 'Strength', 'Endurance'],
+            required=True,
+            help='Workout target areas',
+            )
+    parser.add_argument('-Q', '--EQUIPMENT',
+            required=True,
+            nargs='*', # All input args are gathered into a list
+            help=f'List of equipment user has access to: {equipment}',
+            )
+    args = parser.parse_args()
+
+
+    length_map = {
+        'short': 6,
+        'medium': 9,
+        'long': 12,
+        }
+    WORKOUT_LENGTH = length_map[args.WORKOUT_LENGTH]
+
+    TARGET_AREA = [1 if area in args.TARGET_AREA else 0 for area in areas]
+    EXPERIENCE = args.EXPERIENCE
+    GOAL = args.GOAL
+    EQUIPMENT = ["Body Weight"] + args.EQUIPMENT
+
+    filter_exer(muscle_group, EQUIPMENT, EXPERIENCE)  # filters existing dictionary to only contain valid exercises
+    workout_dist = distribute_exercise(WORKOUT_LENGTH, np.array(TARGET_AREA)) # returns np.array that gives number of exercises for each muscle group
+    print(workout_dist)
+    make_workout(*workout_dist)
+
 
 def distribute_exercise(len_choice, target_choice):
 
