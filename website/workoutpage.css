@@ -21,37 +21,32 @@ html, body {
 
 /* All div sections */
 div {
-  border: #673ab7;
-  border-width: 9pt;
   float: left;
   margin: 5px;
-  width: 80pc;
+  width: 90pc;
 }
 
 /* All 2nd-level div sections */
 div div {
-  border: #3f51b5;
-  border-style: solid;
-  border-width: medium;
-  float: left;
-  clear: left;
   margin-right: 0pc;
-  width: 10pc;
   padding: 5px;
-  width: 100pc;
 }
 
+div #menu{
+  float: left;
+  width: 40pc;
+}
 label {
   font-size: 22pt;
 }
 
-div #workout {
-  width: 80pc;
+div#workout {
+  float: left;
+  width: 40pc;
 }
-
-div div#length {
-  clear: right;
-  float: right;
+div#inputform {
+  float: left;
+  width: 40pc;
 }
 
 select#length {

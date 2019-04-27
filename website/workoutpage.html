@@ -3,34 +3,13 @@
   <head>
     <link href="workoutpage.css" type="text/css" rel="stylesheet"/>
     <title> Team 2 Final Project </title>
-    <script type="text/javascript">
-      function showInput() {
-        var focus = document.getElementsByName('focus');
-        var equip = document.getElementsByName('equip');
-        var length = document.getElementById('length').value;
-        var level = document.getElementById('level').value;
-        var focus_select = [];
-        var equip_select = [];
-        for (var i=0; i<focus.length; i++) {
-          if (focus[i].checked) {
-            focus_select.push(focus[i].value);
-          }
-        }
-        for (var i=0; i<equip.length; i++) {
-          if (equip[i].checked) {
-            equip_select.push(equip[i].value);
-          }
-        }
-        alert("You will get a(n) " + length + " " + level + " workout for your: " + focus_select + "\n" +
-        "Using the following equipment: " + equip_select);
-      }
-    </script>
   </head>
 
   <body>
     <div id="menu">
         <p> Make a workout! </p>
-        <form id="workout" onsubmit="showInput()">
+        <form id="workout" onsubmit="return showInput()" onreset="clearInput()">
+          <div id="inputform">
           <fieldset>
             <legend> Your preferences... </legend>
             <label> Focus area </label> </br>
@@ -71,10 +50,42 @@
             <br> <br>
             <input class="buttons" type="submit" value="Submit">
             <input class="buttons" type="reset" value="Reset">
+            </div>
 
+            <div id="workout">
+              <p id="workouttext"></p>
+            </div>
           </fieldset>
         </form>
     </div>
+  <script type="text/javascript">
+    function showInput() {
+      var focus = document.getElementsByName('focus');
+      var equip = document.getElementsByName('equip');
+      var length = document.getElementById('length').value;
+      var level = document.getElementById('level').value;
+      var focus_select = [];
+      var equip_select = [];
+      for (var i=0; i<focus.length; i++) {
+        if (focus[i].checked) {
+          focus_select.push(focus[i].value);
+        }
+      }
+      for (var i=0; i<equip.length; i++) {
+        if (equip[i].checked) {
+          equip_select.push(equip[i].value);
+        }
+      }
+      var workoutstr = "You will get a(n) " + length + " " + level + " workout for your: " + focus_select + "\n" +
+      "Using the following equipment: " + equip_select;
+      document.getElementById("workouttext").textContent = workoutstr;
+
+      return false;
+    }
+    function clearInput() {
+      document.getElementById("workouttext").textContent = "";
+    }
+  </script>
   </body>
 </html>
 
