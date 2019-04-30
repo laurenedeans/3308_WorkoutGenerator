@@ -8,6 +8,7 @@
   <body>
     <div id="menu">
         <p> Make a workout! </p>
+        <h>       Need help selecting a weight?<a href="weightguide.html"> Click Here </a></h>
         <form id="workout" onsubmit="return showInput()" onreset="clearInput()">
           <div id="inputform">
           <fieldset>
@@ -28,7 +29,7 @@
             <input type="checkbox" name="equip" value="treadmill" > Treadmill <br>
             <input type="checkbox" name="equip" value="elliptical" > Elliptical <br>
             <input type="checkbox" name="equip" value="fullgym" > Full Gym <br>
-
+            
             <br> <br>
             <label> How long? </label>
             <select id="length">
@@ -47,7 +48,9 @@
               <option value="advanced"> Advanced </option>
             </select>
 
-            <br> <br>
+           
+  
+            <br><br>
             <input class="buttons" type="submit" value="Submit">
             <input class="buttons" type="reset" value="Reset">
             </div>
