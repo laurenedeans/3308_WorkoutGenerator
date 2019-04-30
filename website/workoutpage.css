@@ -1,30 +1,67 @@
-/* the css rules for workoutpage.html */
+/* the cccss rules for workoutpage.html */
+
+/* Add a font */
+@font-face {
+  font-family: "EraserDust";
+  src: url("fonts/eraserdust-webfont.eot");
+  src: 
+  url("fonts/eraserdust-webfont.woff") format("woff"),
+  url("fonts/eraserdust-webfont.otf") format("opentype"),
+  url("fonts/eraserdust-webfont.svg#filename") format("svg");
+}
+
+html, body {
+  font-size: larger;
+  background: #2d2d2d;
+  color: #f0f1d8;
+  font-family: EraserDust;
+  padding: 1pc;
+  margin: 1pc;
+  }
 
 /* All div sections */
 div {
-  border: #673ab7;
-  border-width: 9pt;
   float: left;
   margin: 5px;
-  width: 80%;
+  width: 90pc;
 }
 
 /* All 2nd-level div sections */
 div div {
-  border: #3f51b5;
-  border-style: solid;
-  border-width: medium;
-  float: left;
-  clear: left;
   margin-right: 0pc;
-  width: 10pc;
   padding: 5px;
 }
 
-div div#length {
-  clear: right;
-  float: right;
+div #menu{
+  float: left;
+  width: 40pc;
 }
+label {
+  font-size: 22pt;
+}
+
+div#workout {
+  float: left;
+  width: 40pc;
+}
+div#inputform {
+  float: left;
+  width: 40pc;
+}
+
+select#length {
+  font-size: 14pt;
+  color: black;
+}
+
+select {
+  font-size: 14pt;
+}
+
+input[type="checkbox"] + label:initial {
+  background-color: red;
+}
+
 
 div div#experience {
   clear: right;
@@ -36,12 +73,16 @@ div div#buttons {
   width: 96%;
   text-align: center;
   padding-right: 5pc;
+
 }
 
 .buttons {
   padding: 6px;
   margin-right: 5pc;
   margin-left: 5pc;
+  font-size: 14pt;
+  color: black;
+  background: #f0f1d8;
 }
 
 /* Info div only. */
@@ -54,7 +95,7 @@ div#info {
 /* Menu div <p> sections. */
 div#menu p {
   font-weight: bold;
-  font-size: 16pt;
+  font-size: 30pt;
   text-align: center;
 }
 
