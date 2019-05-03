@@ -26,13 +26,15 @@ from collections import OrderedDict
 class WorkoutTestCase(unittest.TestCase):
 
     def test_one_wkout(self):
-        num_of_ex = WorkoutScript_ds.make_workout(1,0,0,0,0)
+        db = WorkoutScript_ds.load_exercise_db()
+        num_of_ex = WorkoutScript_ds.make_workout(db,1,0,0,0,0)
         test = 1 
         self.assertEqual(len(num_of_ex),test)
 
 
     def test_arms_wkout(self):
-        arms = WorkoutScript_ds.make_workout(12,0,0,0,0)
+        db = WorkoutScript_ds.load_exercise_db()
+        arms = WorkoutScript_ds.make_workout(db,12,0,0,0,0)
         all_arms = 0
         for part in arms:
             if "Arms" not in part:
@@ -40,7 +42,8 @@ class WorkoutTestCase(unittest.TestCase):
         self.assertEqual(all_arms,0)
 
     def test_legs_wkout(self):
-        legs = WorkoutScript_ds.make_workout(0,7,0,0,0)
+        db = WorkoutScript_ds.load_exercise_db()
+        legs = WorkoutScript_ds.make_workout(db,0,7,0,0,0)
         all_legs = 0
         for part in legs:
             if "Legs" not in part:
@@ -48,7 +51,8 @@ class WorkoutTestCase(unittest.TestCase):
         self.assertEqual(all_legs,0)
 
     def test_back_wkout(self):
-        back = WorkoutScript_ds.make_workout(0,0,5,0,0)
+        db = WorkoutScript_ds.load_exercise_db()
+        back = WorkoutScript_ds.make_workout(db,0,0,5,0,0)
         all_back = 0
         for part in back:
             if "Back" not in part:

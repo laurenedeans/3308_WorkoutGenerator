@@ -8,8 +8,8 @@
   <body>
     <div id="menu">
         <p> Make a workout! </p>
-        <h>       Need help selecting a weight?<a href="weightguide.html"> Click Here </a></h>
-        <form id="workout" method="post" action="{{ url_for('hello') }}" onreset="clearInput()">
+        <h>       Need help selecting a weight?<a href="{{ url_for('static', filename='weightguide.html') }}"> Click Here </a></h>
+        <form id="workout" method="post" action="{{ url_for('workout') }}" onreset="clearInput()">
           <div id="inputform">
           <fieldset>
             <legend> Your preferences... </legend>

@@ -8,8 +8,8 @@ app = Flask(__name__)
 def form():
     return render_template('workoutpage.html', workout_text='')
 
-@app.route('/hello', methods=['GET', 'POST'])
-def hello():
+@app.route('/workout', methods=['GET', 'POST'])
+def workout():
     if request.method == 'POST':
         focus = [str(i) for i in request.form.getlist('focus')]
         equip = [str(i) for i in request.form.getlist('equip')] + ["Body Weight"]

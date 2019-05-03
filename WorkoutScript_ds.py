@@ -18,7 +18,7 @@ def load_exercise_db():
         }
 
     # group exercises by muscle group
-    with open('../Exercises.csv', 'r') as f:
+    with open('Exercises.csv', 'r') as f:
         csv_f = csv.reader(f)
         for row in csv_f:
             muscle_group.get(row[1], []).append(row)
