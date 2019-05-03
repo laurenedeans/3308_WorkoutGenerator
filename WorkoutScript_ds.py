@@ -58,11 +58,6 @@ def main():
             nargs='*', # All input args are gathered into a list
             help=f'Target areas: {areas}',
             )
-    parser.add_argument('-G', '--GOAL',
-            choices=['Mass', 'Strength', 'Endurance'],
-            required=True,
-            help='Workout target areas',
-            )
     parser.add_argument('-Q', '--EQUIPMENT',
             required=True,
             nargs='*', # All input args are gathered into a list
