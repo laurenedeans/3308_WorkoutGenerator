@@ -70,7 +70,6 @@ def main():
 
     TARGET_AREA = target_areas(args.TARGET_AREA)
     EXPERIENCE = args.EXPERIENCE
-    GOAL = args.GOAL
     EQUIPMENT = ["Body Weight"] + args.EQUIPMENT
 
     muscle_group = load_exercise_db()
