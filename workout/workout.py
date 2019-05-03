@@ -17,7 +17,7 @@ def workout():
         experience = request.form['level']
 
         target_area = wds.target_areas(focus)
-        db = wds.load_exercise_db()
+        db = wds.load_exercise_db(app=app)
         wds.filter_exer(db, equip, experience)
         workout_dist = wds.distribute_exercise(wds.length(length), np.array(target_area))
         workout_list = wds.make_workout(db, *workout_dist)

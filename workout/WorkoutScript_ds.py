@@ -7,7 +7,7 @@ import random
 import numpy as np
 from collections import OrderedDict
 
-def load_exercise_db():
+def load_exercise_db(app=None):
     muscle_group = { 
         'Arms': [],
         'Legs': [],
@@ -18,7 +18,8 @@ def load_exercise_db():
         }
 
     # group exercises by muscle group
-    with open('Exercises.csv', 'r') as f:
+    f = open if not app else app.open_resource
+    with f('Exercises.csv', 'r') as f:
         csv_f = csv.reader(f)
         for row in csv_f:
             muscle_group.get(row[1], []).append(row)
