@@ -7,25 +7,41 @@ import random
 import numpy as np
 from collections import OrderedDict
 
-muscle_group = { 
-    'Arms': [],
-    'Legs': [],
-    'Back': [],
-    'Abdominals': [],
-    'Cardio': [],
-    'Chest': [],
-    }
+def load_exercise_db():
+    muscle_group = { 
+        'Arms': [],
+        'Legs': [],
+        'Back': [],
+        'Abdominals': [],
+        'Cardio': [],
+        'Chest': [],
+        }
 
-# group exercises by muscle group
-with open('Exercises.csv', 'r') as f:
-    csv_f = csv.reader(f)
-    for row in csv_f:
-        muscle_group.get(row[1], []).append(row)
+    # group exercises by muscle group
+    with open('../Exercises.csv', 'r') as f:
+        csv_f = csv.reader(f)
+        for row in csv_f:
+            muscle_group.get(row[1], []).append(row)
+    return muscle_group
+
+def areas_list():
+    return 'Arms,Legs,Chest,Back,Abdominals'.split(',')
+
+def target_areas(choices):
+    return [1 if area in choices else 0 for area in areas_list()]
+
+def length(length_choice):
+    length_map = {
+        'short': 6,
+        'medium': 9,
+        'long': 12,
+        }
+    return length_map[length_choice]
 
 # Calling w/ 1 arg: ./WorkoutScript_ds.py
 # main function catches any errors in calling on program.
 def main():
-    areas = 'Arms,Legs,Chest,Back,Abdominals'.split(',')
+    areas = areas_list()
     equipment = 'Dumbells, Bar, Machine, Body Weight, Medicine Ball, Jump rope, Pool, Bicycle'
     parser = argparse.ArgumentParser(description='Workout generator')
     parser.add_argument('-L', '--WORKOUT_LENGTH',
@@ -55,22 +71,20 @@ def main():
     args = parser.parse_args()
 
 
-    length_map = {
-        'short': 6,
-        'medium': 9,
-        'long': 12,
-        }
-    WORKOUT_LENGTH = length_map[args.WORKOUT_LENGTH]
+    WORKOUT_LENGTH = length(args.WORKOUT_LENGTH)
 
-    TARGET_AREA = [1 if area in args.TARGET_AREA else 0 for area in areas]
+    TARGET_AREA = target_areas(args.TARGET_AREA)
     EXPERIENCE = args.EXPERIENCE
     GOAL = args.GOAL
     EQUIPMENT = ["Body Weight"] + args.EQUIPMENT
 
+    muscle_group = load_exercise_db()
     filter_exer(muscle_group, EQUIPMENT, EXPERIENCE)  # filters existing dictionary to only contain valid exercises
     workout_dist = distribute_exercise(WORKOUT_LENGTH, np.array(TARGET_AREA)) # returns np.array that gives number of exercises for each muscle group
-    print(workout_dist)
-    make_workout(*workout_dist)
+    Workout = make_workout(muscle_group, *workout_dist)
+    for exercise in Workout:
+        print("\t" + exercise[0] + " -- " +  exercise[1] + " (" + exercise[2] + ")" + 
+                " -- " + exercise[3] + ", " + exercise[4] + "\n")
 
 
 def distribute_exercise(len_choice, target_choice):
@@ -95,11 +109,10 @@ def distribute_exercise(len_choice, target_choice):
 
 
 
-def make_workout(arm_no, leg_no, back_no, chest_no, abs_no):
+def make_workout(muscle_group, arm_no, leg_no, back_no, chest_no, abs_no):
     #  -- Input: predefined_set (from distribute_exercise())
     #  -- Output: List in the form [sets, reps, weight, exercise_list]
-    
-    Workout = []
+
 
     focus_num = OrderedDict({
         'Arms': arm_no,
@@ -110,42 +123,36 @@ def make_workout(arm_no, leg_no, back_no, chest_no, abs_no):
         })
 
     # Takes random sample from dictionary, adds new exercises to workout
+    Workout = []
     for area, num in focus_num.items():
         sample = random.sample(muscle_group[area], min(num, len(muscle_group[area])))
         Workout.extend(sample)
-    
-    # prints (or sends to another txt file) the proper, formatted list 
-     
-    wkout_list_idx = -1
-    for exercise in Workout:
-        print("\t" + exercise[0] + " -- " +  exercise[1] + " (" + exercise[2] + ")" + 
-                " -- " + exercise[3] + ", " + exercise[4] + "\n")
-	
     return Workout
 
 
 def filter_exer(MuscleGroup, EQUIPMENT, EXPERIENCE):
     # Modifies the existing dictionary, replacing the existing
-    #print("Filtered Exercises:")
     for area, exercise_list in MuscleGroup.items():
         valid_exercises = []
         for exercise in exercise_list:
+            equip_required = {i.strip() for i in exercise[3].split(',')}
+            equip_chosen = set(EQUIPMENT)
+            have_equip = equip_required.intersection(equip_chosen) != set()
+
             if EXPERIENCE == "Advanced":
-                if (exercise[3] in EQUIPMENT):
-                    #print(exercise[0], "\n\t -- ", exercise[1], " -- ", exercise[3], " -- ", exercise[5])
+                if have_equip:
                     valid_exercises.append(exercise)
             elif EXPERIENCE == "Intermediate":
-                if (exercise[3] in EQUIPMENT) & (exercise[5] != "Advanced"):
-                    #print(exercise[0], "\n\t -- ", exercise[1], " -- ",exercise[3], " -- ", exercise[5])
+                if have_equip & (exercise[5] != "Advanced"):
                     valid_exercises.append(exercise)
             else:
-                if (exercise[3] in EQUIPMENT) & (exercise[5] == "Beginner"):
-                    #print(exercise[0], "\n\t -- ", exercise[1], " -- ",exercise[3], " -- ", exercise[5])
+                if have_equip & (exercise[5] == "Beginner"):
                     valid_exercises.append(exercise)
-        muscle_group[area] = valid_exercises
-    #print("\n\n")
 
-#if __name__ == "__main__":
- #   main()
-main()
+        MuscleGroup[area] = valid_exercises
+
+
+if __name__ == "__main__":
+    main()
+
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="workoutpage.css" type="text/css" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/workoutpage.css') }}" rel="stylesheet"/>
     <title> Team 2 Final Project </title>
   </head>
 
@@ -9,30 +9,29 @@
     <div id="menu">
         <p> Make a workout! </p>
         <h>       Need help selecting a weight?<a href="weightguide.html"> Click Here </a></h>
-        <form id="workout" onsubmit="return showInput()" onreset="clearInput()">
+        <form id="workout" method="post" action="{{ url_for('hello') }}" onreset="clearInput()">
           <div id="inputform">
           <fieldset>
             <legend> Your preferences... </legend>
             <label> Focus area </label> </br>
-            <input type="checkbox" class="focus_choices" name="focus" value="arms" > Arms <br>
-            <input type="checkbox" class="focus_choices" name="focus" value="legs" > Legs <br>
-            <input type="checkbox" class="focus_choices" name="focus" value="chest" > Chest <br>
-            <input type="checkbox" class="focus_choices" name="focus" value="core" > Core <br>
-            <input type="checkbox" class="focus_choices" name="focus" value="fullbody" > Full Body <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="Arms" > Arms <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="Back" > Back <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="Chest" > Chest <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="Abdominals" > Core <br>
+            <input type="checkbox" class="focus_choices" name="focus" value="Legs" > Legs <br>
             <br> <br>
             <label> Gym equipment </label> </br>
-            <input type="checkbox" name="equip" value="dumbells" > Dumbells <br>
-            <input type="checkbox" name="equip" value="barbell" > Barbell <br>
-            <input type="checkbox" name="equip" value="medball" > Medicine Ball <br>
-            <input type="checkbox" name="equip" value="jumprope" > Jump Rope <br>
-            <input type="checkbox" name="equip" value="stationarybike" > Stationary Bike <br>
-            <input type="checkbox" name="equip" value="treadmill" > Treadmill <br>
-            <input type="checkbox" name="equip" value="elliptical" > Elliptical <br>
-            <input type="checkbox" name="equip" value="fullgym" > Full Gym <br>
-            
+            <input type="checkbox" name="equip" value="Dumbells" > Dumbells <br>
+            <input type="checkbox" name="equip" value="Bar" > Bar <br>
+            <input type="checkbox" name="equip" value="Machine" > Machines <br>
+            <input type="checkbox" name="equip" value="Bicycle" > Stationary Bike <br>
+            <input type="checkbox" name="equip" value="Medicine Ball" > Medicine Ball <br>
+            <input type="checkbox" name="equip" value="Jump rope" > Jump Rope <br>
+            <input type="checkbox" name="equip" value="Pool" > Pool <br>
+
             <br> <br>
             <label> How long? </label>
-            <select id="length">
+            <select id="length" name="length">
               <option value=0> Length: </option>
               <option value="long"> Long (45-60 mins)</option>
               <option value="medium"> Medium (30-45 mins) </option>
@@ -41,15 +40,13 @@
 
             <br> <br>
             <label> Experience Level? </label>
-            <select id="level">
+            <select id="level" name="level">
               <option value=0> Your experience level: </option>
-              <option value="beginner"> Beginner </option>
-              <option value="intermediate"> Intermediate </option>
-              <option value="advanced"> Advanced </option>
+              <option value="Beginner"> Beginner </option>
+              <option value="Intermediate"> Intermediate </option>
+              <option value="Advanced"> Advanced </option>
             </select>
 
-           
-  
             <br><br>
             <input class="buttons" type="submit" value="Submit">
             <input class="buttons" type="reset" value="Reset">
