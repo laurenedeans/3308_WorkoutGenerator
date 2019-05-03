@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def form():
-    return render_template('workoutpage.html')
+    return render_template('workoutpage.html', workout_text='')
 
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
@@ -22,7 +22,17 @@ def hello():
         workout_dist = wds.distribute_exercise(wds.length(length), np.array(target_area))
         workout_list = wds.make_workout(db, *workout_dist)
 
-        return render_template('greeting.html', focus=workout_list)
+        workout_str = format_workout(workout_list)
+
+        return render_template('workoutpage.html', workout_text=workout_str)
+
+def format_workout(workout_list):
+    header = f"Do 12 reps of each of the following exercises. <br> "
+    header = header + "Repeat circuit for a total of 3 times. <br><br> "
+    names = [i[0] for i in workout_list]
+    return header + '<br>'.join(names)
+
+
 
 if __name__ == "__main__":
     app.run()

@@ -89,6 +89,9 @@ def main():
 
 def distribute_exercise(len_choice, target_choice):
 
+    # If no target areas are chosen, pull equally from all areas.
+    target_choice = np.ones_like(target_choice) if not any(target_choice) else target_choice
+
     ret = target_choice * len_choice
     bound = len_choice / sum(target_choice) - 1
 
