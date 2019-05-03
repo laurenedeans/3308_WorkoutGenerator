@@ -1,0 +1,97 @@
+
+## A description of how the app was created/deployed.
+
+- In local GitHub repo, created a Heroku app
+  - heroku create workout3308
+- Access app at https://dashboard.heroku.com/apps/workout3308
+
+
+Start a Heroku project following this tutorial:
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
+- install pipenv/flask/gunicorn inside a conda environment
+
+  ```
+  conda create -n finalproject python=3
+  source activate finalproject
+  pip install pipenv
+  pip install gunicorn
+  ```
+
+- Reorganize to put all app-related stuff in a workout directory. The result:
+
+  ```
+  ├── Procfile
+  ├── README.md
+  ├── TESTING.md
+  ├── Team2_FinalSubmission.md
+  ├── WebsiteDesignBasic.png
+  ├── create_heroku.log
+  ├── requirements.txt
+  ├── runtime.txt
+  └── workout
+      ├── Exercises.csv
+      ├── WorkoutScript_ds.py
+      ├── new_test.py
+      ├── script_test.py
+      ├── static
+      │   ├── css
+      │   │   ├── dumbbells.jpg
+      │   │   ├── fonts
+      │   │   ├── weightguide.css
+      │   │   └── workoutpage.css
+      │   └── weightguide.html
+      ├── templates
+      │   └── workoutpage.html
+      └── workout.py
+  ```
+
+- Run a local test server to debug by typing the following in the top level of the repo.
+
+  ```
+  gunicorn workout.workout:app
+  ```
+
+- Generate a requirements.txt file for Heroku
+
+  ```
+  pip freeze > requirements.txt
+  ```
+
+- Make a runtime.txt for Heroku
+
+  ```
+  echo python-3.7.3 > runtime.txt
+  ```
+
+- Create a Procfile for Heroku. This file tells Heroku what to run on startup. It starts a gunicorn server running the
+app defined inside our workout package, where it finds the workout module. Inside workout.workout module, app is defined
+as the Flask app (on or about line 5).
+
+  ```
+  $ cat Procfile
+  web: gunicorn workout.workout:app
+  $
+  ```
+
+- Commit everything to repo.
+
+- Push to Heroku repo
+
+  ```
+  git push heroku master
+  ```
+
+- Make sure that an instance of the app is running on Heroku
+
+  ```
+  heroku ps:scale web=1
+  ```
+
+- Open the web page
+
+  ```
+  heroku open
+  ```
+
+
+
