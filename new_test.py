@@ -82,7 +82,7 @@ class WorkoutTestCase(unittest.TestCase):
         test_array_short = np.array([1,0,1,1,0])  
         test_val_short = WorkoutScript_ds.distribute_exercise(workout_length,test_array_short)
         short = 6
-        self.assertEqual(short,len(test_val_short))
+        self.assertEqual(short,sum(test_val_short))
 
 
     def test_distribute_medwkout(self):
@@ -107,7 +107,7 @@ class WorkoutTestCase(unittest.TestCase):
         workout_length = length_map['medium']
         test_array = np.array([1,0,1,1,0])
         test_val = WorkoutScript_ds.distribute_exercise(workout_length,test_array)
-        self.assertEqual(workout_length,len(test_val))
+        self.assertEqual(workout_length,sum(test_val))
 
 
     def test_distribute_longwkout(self):
@@ -132,7 +132,7 @@ class WorkoutTestCase(unittest.TestCase):
         workout_length = length_map['long']
         test_array = np.array([1,0,1,1,0])
         test_val = WorkoutScript_ds.distribute_exercise(workout_length,test_array)
-        self.assertEqual(workout_length,len(test_val))
+        self.assertEqual(workout_length,sum(test_val))
 
 
 
